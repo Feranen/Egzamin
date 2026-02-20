@@ -32,7 +32,7 @@ h1,h2,h3 {
 table, td {
     width: 85%;
     border: solid 1px maroon;
-    border-collapse: ;
+    border-collapse: collapse;
 }
 
 ol {
