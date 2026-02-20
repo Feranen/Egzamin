@@ -1,54 +1,57 @@
 * {
-
-    font-family: Tahoma;
+  font-family: Tahoma;
 }
 
-header, footer {
-    background-color: maroon;
-    color: white;
-    padding: 10px;
+header,
+footer {
+  background-color: maroon;
+  color: white;
+  padding: 10px;
 }
 
 main {
-    display: flex;
+  display: flex;
 }
 
 section {
-    width: 50%;
-    height: 500px;
+  width: 50%;
+  height: 500px;
 }
 
 .left {
-    background-color: lightsalmon;
+  background-color: lightsalmon;
 }
 .right {
-    background-color: darksalmon;
+  background-color: darksalmon;
 }
 
-h1,h2,h3 {
-    text-align: center;
+h1,
+h2,
+h3 {
+  text-align: center;
 }
 
-table, td {
-    width: 85%;
-    border: solid 1px maroon;
-    border-collapse: collapse;
+table,
+td {
+  width: 85%;
+  border: solid 1px maroon;
+  border-collapse: collapse;
 }
 
 ol {
-    list-style: none;
+  list-style: none;
 }
 
 button {
-    background-color: maroon;
-    color: white;
-    margin-left: 20px;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
+  background-color: maroon;
+  color: white;
+  margin-left: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
 }
 
 button:hover {
-    background-color: white;
-    color: maroon;
+  background-color: white;
+  color: maroon;
 }
