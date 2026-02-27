@@ -2,3 +2,25 @@ SELECT `id`, `imie`, `nazwisko` FROM `personel` WHERE personel.status = "Policja
 SELECT typ, COUNT(*) LiczbaPojazdow FROM `pojazdy` GROUP BY typ;
 SELECT personel.id, personel.nazwisko FROM personel WHERE personel.id NOT IN (SELECT rejestr.id_personel FROM rejestr );
 INSERT INTO `rejestr`(`data`, `id_personel`, `id_pojazd`) VALUES (CURRENT_DATE,1,14);
+
+SELECT personel.id, `nazwisko` FROM `personel` LEFT JOIN rejestr ON personel.id = rejestr.id_personel WHERE rejestr.id_personel is NULL
+
+        if ($_SERVER["REQUEST_METHOD" == "POST"]) {
+          if ($_POST["Policjant"]) {
+            $polOrRat = "Policjant";
+          } else {
+            $polOrRat = "Ratownik";
+          }
+          $select_query = 'SELECT `id`, `imie`, `nazwisko` FROM `personel` WHERE personel.status = "{$polOrRat}";';
+          $result = mysqli_query($conn, $select_query);
+          $rows = mysqli_fetch_row($result);
+          echo "<h3>Wybrano opcję: {$polOrRat}</h3>";
+          $lp = 0;
+          while (mysqli_num_rows($result) > $rows) {
+            echo "<tr>";
+            echo "<td>" . $lp++ . "</td>";
+            echo "<td>" . $result['imie'] . "</td>";
+            echo "<td>" . $result['nazwiskoe'] . "</td>";
+            echo "</tr>";
+          }
+        }
